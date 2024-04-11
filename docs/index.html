@@ -12,6 +12,15 @@
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.big-p {
+				font-size: 130%;
+			}
+
+			li{
+				margin: 10px 0;
+			}
+		</style>
 	</head>
 	<body>
 
@@ -29,16 +38,215 @@
 				</section>
 				<section>
 					<section>
-						<h2>Cloud computing i njegova ograničenja </h2>
+						<h2>Ograničenja klasičnih i cloud arhitektura</h2>
 					</section>
 					<section>
-						<p>Lorem ipsum dolor sit amet</p>
+						<p>Nagli rast broja IoT uređaja u poslednjih nekoliko godina (kućni aparati, industrijski senzori...) prouzrokuje:</p>
+						<ul>
+							<li>Zagušenje mreže</li>
+							<li>Povećanu latenciju</li>
+							<li>Energetske gubitke</li>
+						</ul>
+					</section>
+					<section>
+						<p class="big-p">Takođe, uploadovanje osteljivih informacija na cloud je rizično, a u nekim slučajevima i zabranjeno.</p>
 					</section>
 				</section>
-				
-				
+				<!-- ***** EDGE ***** -->
 				<section>
-					<h2>Hvala na pažnji</h2>
+					<section>
+						<h2>Edge computing</h2>
+					</section>
+					<section>
+						<p class="big-p">Šta je edge?</p>
+						<p class="big-p">Kako je to nova ideja?</p>
+					</section>
+					<section>
+						<p class="big-p">Osnovne karakteristike</p>
+						<ul>
+							<li>Blizina izvora podataka</li>
+							<li>Decentralizacija</li>
+						</ul>
+					</section>
+					<section>
+						<p class="big-p">Arhitektura</p>
+						<img src="images/edge_arch.jpg" alt="edge architecture">
+					</section>
+					<section>
+						<p class="big-p">Primene</p>
+						<ul>
+							<li>Prediktivno održavanje mašina u pogonima</li>
+							<li>Video nadzor podržan veštačkom inteligencijom</li>
+							<li>Prenos događaja uživo</li>
+						</ul>
+					</section>
+				</section>
+				<!-- ***** FOG ***** -->
+				<section>
+					<section>
+						<h2>Fog computing</h2>
+					</section>
+					<section>
+						<ul>
+							<li>Unapređenje edge computinga</li>
+							<li>
+								Uvode se fog čvorovi koji se nalaze između edge i cloud sistema
+								 <ul>
+									<li>Tehnički, ekstenzija cloud-a koja je mnogo bliža krajnjim uređajima</li>
+								</ul>
+							</li>
+							<li>Očuvana brza komunikacija sa niskom latencijom, kao i bezbednost</li>
+							<li>Omogućene resursno zahtevnije obrade podataka (delegiranje fog čvorovima)</li>
+							<li>Veća mogućnost geografskog rasprostiranja</li>
+						</ul>
+					</section>
+						<section>
+							<p class="big-p">Arhitektura</p>
+							<img  width=130% src="images/fog_arch.png" alt="fog architecture">
+						</section>
+						<section>
+							<p class="big-p">Primene</p>
+							<ul>
+								<li>Autonomna vozila</li>
+								<li>Pametne kuće</li>
+							</ul>
+					</section>
+				</section>
+				<!-- ***** COMPUTING CONTINUUM ***** -->
+				<section>
+					<section>
+						<h2>Computing continuum</h2>
+					</section>
+					<section>
+						<ul>
+							<li>Evolucija prethodne 2 paradigme</li>
+							<li>Edge, fog i cloud computing integrisani u jedan kohezivan sistem</li>
+							<li>Mobilni, IoT uređaji, razni senzori</li>
+							<li>Sveprisutna mreža uređaja na koju se povezuje bez razmišljanja o pozadinskoj implementaciji</li>
+						</ul>
+					</section>
+					<section>
+						<p class="big-p">Karakteristike</p>
+						<ul>
+							<li>Omogućava funkcionisanje efikasnih, real time i dinamičkih računskih procesa</li>
+							<li>
+								Distribuiranje opterećenja širom uređaja unutar mreže
+								<ul>
+									<li>Delegiranje posla na osnovu blizine, procesne moći i prioriteta</li>
+									<li>Real time obrada na edge, a kompleksna analiza na fog i cloud uređajima</li>
+									<li>Brže vreme obrade</li>
+									<li>Povećana skalabilnost</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<p class="big-p">Arhitektura</p>
+						<img src="images/continuum_arch.png" alt="computing continuum architecture">
+					</section>
+					<section>
+					<p class="big-p">Primene</p>
+					<ul>
+						<li>Pametni gradovi</li>
+						<li>Zdravstvo</li>
+					</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Obezbeđivanje otpornosti na otkaz u zdravstvenim ustanovama</h2>
+					</section>
+					<section>
+						<p>U zdravstvenim ustanovama, zahteva se besprekoran rad aplikacije. Ove aplikacije
+							 upravljaju kritičnim zadacima kao što su čuvanje podataka o pacijentima,
+							praćenje njihovog trenutnog stanja i davanje lekova. Svaki zastoj ili kvar može direktno
+							 uticati na negu i bezbednost pacijenata.</p>
+					</section>
+					<section>
+						<p class="big-p">Cloud rešenje</p>
+						<ul>
+							<li>Skalabilnost i lakoća upravljanja</li>
+							<li>Kašnjenje, nepouzdanost mreže i bezbednosti osetljivih podataka pacijenata</li>
+							<li>Potpuni prekid rada aplikacije u slučaju otkaza cloud servera</li>
+						</ul>
+					</section>
+					<section>
+						<p class="big-p">Fog rešenje</p>
+						<ul>
+							<li>Korišteni senzorski i serverski uređaji u neposrednoj blizini zdravstvene ustanove</li>
+							<li>Raspberry Pi 4</li>
+							<li>Osluškivanje cloud servera i u slučaju pada, premoštavanje saobraćaja na lokalni server i repliciranu bazu podataka</li>
+							<li>Lokalnost uređaja minimizuje latenciju i mogućnost prekida veze</li>
+						</ul>
+					</section>
+					<section>
+						<p class="big-p">Glavni moduli</p>
+						<ul>
+							<li>
+								Detekcija otkaza cloud servera
+								<ul>
+									<li>Python skripta koja šalje heartbeat signal cloud serveru na svakih 5 sekundi</li>
+								</ul>
+							</li>
+							<li>Replikacija podataka i servisa</li>
+							<li>Delegiranje posla fog čvoru</li>
+						</ul>
+					</section>
+					<section>
+						<p class="big-p">Replikacija servisa i baze podataka</p>
+						<ul>
+							<li>Cold replika</li>
+							<li>
+								Sadrži samo neophodne servise za rad aplikacije
+								<ul>
+									<li>Apache Tomcat servis</li>
+									<li>Java Swing aplikacija</li>
+									<li>MySQL baza podataka</li>
+								</ul>
+							</li>
+							<li>Lokalna baza podataka periodično se ažurira u odnosu na glavnu bazu</li>
+						</ul>
+					</section>
+					<section>
+						<p class="big-p">Delegiranje posla</p>
+						<img src="images/ip_switching.png" alt="ip switching">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Augmented reality offloading</h2>
+					</section>
+					<section>
+						<p class="big-p">Zadatak i problemi</p>
+						<ul>
+							<li>Detekcija i obeležavanje objekata snimljenih kamerom mobilnog uređaja</li>
+						</ul>
+						<img src="images/ar_example.png" alt="">
+						<ul>
+							<li>Mobilni uređaji nemaju dovoljno resursa neophodnih za real time procesiranje</li>
+							<li>Delegiranje posla na cloud, prouzrokuje spor odziv</li>
+						</ul>
+					</section>
+					<section>
+						<p class="big-p">Razlaganje aplikacije na izolovane procese</p>
+						<img src="images/ar_processes.png" alt="">
+						<ul>
+							<li>Različiti hardverski zahtevi</li>
+							<li>Implementirani u Javi radi portabilnosti (OSGi SO sistem za upravljanje modulima)</li>
+							<li>Procesi koji su kritični po performanse implementirani pomoću C/C++</li>
+							<li>Moguće definisanje zahteva za određene performanse procesa (najčešće brzine izvršavanja) pomoću XML šeme</li>
+						</ul>
+					</section>
+					<section>
+						<p class="big-p">Cloudlet arhitektura</p>
+						<img src="images/cloudlet_arch.png" alt="">
+						<ul>
+							<li>Međusobna komunikacija pomoću RPC protokola</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h2>Hvala na pažnji!</h2>
 				</section>
 			</div>
 		</div>
